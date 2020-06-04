@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="nojs" lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Minikube Profiles – jeyaramashok.github.io</title>
+<meta name="description" content="&lt;p&gt;Every new release of Kuberentes introduces many new changes. Some API&amp;rsquo;s graduate into stable, few move into beta from alpha, few gets deprecated and few might be …&lt;/p&gt;">
+<meta name="created" content="2020-05-02T00:00:00+0000">
+<meta name="modified" content="2020-05-02T00:00:00+0000">
+
+
+<meta property="og:site_name" content="jeyaramashok.github.io">
+<meta property="og:title" content="Minikube Profiles">
+<meta property="og:url" content="https://jeyaramashok.github.io/posts/minikube-profiles/">
+<meta property="og:type" content="article">
+
+<meta name="generator" content="Hugo 0.72.0" />
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+
+<link rel="canonical" href="https://jeyaramashok.github.io/posts/minikube-profiles/">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="stylesheet" href="/css/styles.07de9722ae74190da91740ecb1e12bbfa31de324e29ab4972bdcc4131519528c.css">
+<link rel="stylesheet" href="/css/print.27fc184f8670f41a2690985390779e7b20335a8fadff8fa015cf9417ffe50c36.css" media="print">
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "Minikube Profiles",
+    "datePublished": "2020-05-02T00:00:00Z",
+    "dateModified": "2020-05-02T00:00:00Z",
+    "url" : "https://jeyaramashok.github.io/posts/minikube-profiles/",
+    "description": "\u003cp\u003eEvery new release of Kuberentes introduces many new changes. Some API\u0026rsquo;s graduate into stable, few move into beta from alpha, few gets deprecated and few might be …\u003c/p\u003e",
+    "keywords": ["kubernetes"],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jeyaramashok.github.io/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "jeyaramashok.github.io",
+      "url": "https://jeyaramashok.github.io/"
+    }
+  }
+</script>
+
+<script defer src="/js/lib/umbrella.min.b426107371d121c9a56a27aac9e9058ff592a021e2f4c3c94827fe70920d3cbb.js"></script>
+<script defer src="/js/script.min.8e4d91ebe0d9226621e408b7205bd7b009e4935608e4b29c4275116490cc836d.js"></script>
+
+
+</head>
+
+<body class="single-page">
+<div class="page layout__page layout__sidebar-second">
+<header class="header layout__header">
+
+<h1 class="header__site-name">
+<a href="/" title="Home" class="header__site-link" rel="home"><span>jeyaramashok.github.io</span></a>
+</h1>
+<div class="region header__region">
+</div>
+</header>
+
+<nav class="main-menu layout__navigation">
+<h2 class="visually-hidden">Main menu</h2>
+<ul class="navbar">
+<li><a href="/">Home</a></li>
+<li><a href="/posts/" class="active" aria-current="page">Posts</a></li>
+</ul>
+</nav>
+
+
+<main class="main layout__main">
+<article class="section-posts single-view">
+<header>
+<h1 class="title ">Minikube Profiles</h1>
+<div class="tags">
+Tags:
+<ul>
+<li><a href="/tags/kubernetes">kubernetes</a></li>
+</ul>
+</div>
+</header>
+<div class="content">
+<p>Every new release of Kuberentes introduces many new changes. Some API&rsquo;s graduate into stable, few move into beta from alpha, few gets deprecated and few might be removed.</p>
+<p>For example, here is an excerpt from <a href="https://kubernetes.io/blog/2020/03/25/kubernetes-1-18-release-announcement/">kubernetes 1.18 release notes</a></p>
+<blockquote>
+<p>We’re pleased to announce the delivery of Kubernetes 1.18, our first release of 2020! Kubernetes 1.18 consists of 38 enhancements: 15 enhancements are moving to stable, 11 enhancements in beta, and 12 enhancements in alpha.</p>
+</blockquote>
+<p>Sometimes it really helps to actually login to the cluster and see it for ourselves. This is where <a href="https://github.com/kubernetes/minikube">minikube</a> <a href="https://minikube.sigs.k8s.io/docs/commands/profile/">profiles</a> come in handy. They offer a quick way to spin up a specific version of kubernetes or multiple instances. Using which we can use to quickly test or check if some API is avaialable or even compare the behaviour between different versions.</p>
+<h3 id="start-an-instance-with-a-profile">Start an instance with a profile</h3>
+<p>These are some example commands to spin up a instance with a specific kubernetes version.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ minikube start -p v1.14 --kubernetes-version v1.14.10
+$ minikube start -p v1.15 --kubernetes-version v1.15.12
+$ minikube start -p v1.16 --kubernetes-version v1.16.10
+$ minikube start -p v1.17 --kubernetes-version v1.17.6
+$ minikube start -p v1.18 --kubernetes-version v1.18.3
+</code></pre></div><ul>
+<li><code>--kubernetes-version</code> flag specifies which kubernetes version we want to spin up.</li>
+<li><code>-p, --profile</code> flag is the name for the minikube instance</li>
+</ul>
+<p>You can find more kuberetes versions in the <a href="https://github.com/kubernetes/kubernetes/releases">github releases</a></p>
+<h3 id="list-profiles">List Profiles</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ minikube profile list
+|---------|-----------|---------|---------------|------|----------------|---------|
+| Profile | VM Driver | Runtime |      IP       | Port |    Version     | Status  |
+|---------|-----------|---------|---------------|------|----------------|---------|
+| v1.14   | hyperkit  | docker  | 192.168.64.16 | <span style="color:#ae81ff">8443</span> | v1.14.10       | Running |
+| v1.15   | hyperkit  | docker  | 192.168.64.15 | <span style="color:#ae81ff">8443</span> | v1.15.12       | Stopped |
+| v1.16   | hyperkit  | docker  | 192.168.64.14 | <span style="color:#ae81ff">8443</span> | v1.16.10       | Running |
+| v1.18   | hyperkit  | docker  | 192.168.64.17 | <span style="color:#ae81ff">8443</span> | v1.18.3        | Running |
+|---------|-----------|---------|---------------|------|----------------|---------|
+</code></pre></div><h3 id="switch-profiles">Switch Profiles</h3>
+<p>To switch between instances, the minikube profile command can be used to set or switch to a particular profile. This also changes the current kubectl context.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ minikube profile v1.15
+✅  minikube profile was successfully set to v1.15
+$ kubectl config current-context
+v1.15
+$ minikube profile v1.16
+✅  minikube profile was successfully set to v1.16
+$ kubectl config current-context
+v1.15
+</code></pre></div><h3 id="stopping-and-deleting-instance">Stopping and Deleting Instance</h3>
+<p>To stop a running instance associated with the profile</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ minikube stop -p v1.16
+</code></pre></div><p>To delete the local cluster associated with the profile</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ minikube delete -p v1.16
+</code></pre></div><h3 id="references">References</h3>
+<ul>
+<li><a href="https://minikube.sigs.k8s.io/docs/">Minikube</a></li>
+<li><a href="https://github.com/kubernetes/kubernetes">Kuberneres</a></li>
+</ul>
+
+</div>
+</article>
+</main>
+
+
+<footer class="footer layout__footer">
+<p><span>© jeyaramashok.github.io</span></p>
+
+
+</footer>
+
+</div>
+</body>
+</html>
