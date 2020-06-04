@@ -51,7 +51,7 @@ v1.15
 $ minikube profile v1.16
 ✅  minikube profile was successfully set to v1.16
 $ kubectl config current-context
-v1.15
+v1.16
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;stopping-and-deleting-instance&#34;&gt;Stopping and Deleting Instance&lt;/h3&gt;
 &lt;p&gt;To stop a running instance associated with the profile&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ minikube stop -p v1.16
