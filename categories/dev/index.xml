@@ -22,7 +22,7 @@
 &lt;p&gt;Sometimes it really helps to actually login to the cluster and see it for ourselves. This is where &lt;a href=&#34;https://github.com/kubernetes/minikube&#34;&gt;minikube&lt;/a&gt; &lt;a href=&#34;https://minikube.sigs.k8s.io/docs/commands/profile/&#34;&gt;profiles&lt;/a&gt; come in handy. They offer a quick way to spin up a specific version of kubernetes or multiple instances. Using which we can use to quickly test or check if some API is avaialable or even compare the behaviour between different versions.&lt;/p&gt;
 &lt;h3 id=&#34;start-an-instance-with-a-profile&#34;&gt;Start an instance with a profile&lt;/h3&gt;
 &lt;p&gt;These are some example commands to spin up a instance with a specific kubernetes version.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ minikube start -p v1.14 --kubernetes-version v1.14.10
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ minikube start -p v1.14 --kubernetes-version v1.14.10
 $ minikube start -p v1.15 --kubernetes-version v1.15.12
 $ minikube start -p v1.16 --kubernetes-version v1.16.10
 $ minikube start -p v1.17 --kubernetes-version v1.17.6
@@ -33,7 +33,7 @@ $ minikube start -p v1.18 --kubernetes-version v1.18.3
 &lt;/ul&gt;
 &lt;p&gt;You can find more kuberetes versions in the &lt;a href=&#34;https://github.com/kubernetes/kubernetes/releases&#34;&gt;github releases&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;list-profiles&#34;&gt;List Profiles&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ minikube profile list
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ minikube profile list
 |---------|-----------|---------|---------------|------|----------------|---------|
 | Profile | VM Driver | Runtime |      IP       | Port |    Version     | Status  |
 |---------|-----------|---------|---------------|------|----------------|---------|
@@ -44,7 +44,7 @@ $ minikube start -p v1.18 --kubernetes-version v1.18.3
 |---------|-----------|---------|---------------|------|----------------|---------|
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;switch-profiles&#34;&gt;Switch Profiles&lt;/h3&gt;
 &lt;p&gt;To switch between instances, the minikube profile command can be used to set or switch to a particular profile. This also changes the current kubectl context.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ minikube profile v1.15
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ minikube profile v1.15
 ✅  minikube profile was successfully set to v1.15
 $ kubectl config current-context
 v1.15
@@ -54,9 +54,9 @@ $ kubectl config current-context
 v1.16
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;stopping-and-deleting-instance&#34;&gt;Stopping and Deleting Instance&lt;/h3&gt;
 &lt;p&gt;To stop a running instance associated with the profile&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ minikube stop -p v1.16
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ minikube stop -p v1.16
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To delete the local cluster associated with the profile&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ minikube delete -p v1.16
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ minikube delete -p v1.16
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://minikube.sigs.k8s.io/docs/&#34;&gt;Minikube&lt;/a&gt;&lt;/li&gt;
