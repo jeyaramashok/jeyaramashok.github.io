@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://jeyaramashok.github.io/posts/minikube-profiles/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.111.3">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 
@@ -22,8 +22,8 @@
 <link rel="canonical" href="https://jeyaramashok.github.io/posts/minikube-profiles/">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-<link rel="stylesheet" href="/css/styles.220f12cbeefa3ca61dd63c4390295bf3974c4ba9557837d5e408db1b40a477ee.css">
-<link rel="stylesheet" href="/css/print.27fc184f8670f41a2690985390779e7b20335a8fadff8fa015cf9417ffe50c36.css" media="print">
+<link rel="stylesheet" href="/css/styles.9e1707c27e29355c09c8aedae25f192ce9899da613f74d06c03b35231e721796.css">
+<link rel="stylesheet" href="/css/print.31e2819287afc91406f2fd43d21a8ba4a0cdfc272e439c90db0c6e47efc7c346.css" media="print">
 
 <script type="application/ld+json">
   {
@@ -47,17 +47,16 @@
   }
 </script>
 
-<script src="/js/script-early.min.3b0e641814c87f6a1d6ffa5e7d597f29faa8ce11482541e8801dc34013817c91.js"></script>
-<script defer src="/js/lib/umbrella.min.6e17830ccdded0a13b96d6993865b58202bc2ee750e5892a51858ab048b2bebb.js"></script>
-<script defer src="/js/script.min.c2752732454d16255cfd30375b9a3e48a37b7b809c917b33920889c859ba1300.js"></script>
+<script src="/js/script-early.min.21220209af63c496c7531316922ef9a4548661be9388bbcd1f9899bb0b842b21.js"></script>
+
+<script defer src="/js/script.min.f8f04035e9a9424ebc267c1a5fdb513d79b611a04b85cab2ac414d091ac9e94c.js"></script>
 
 
 </head>
 
 <body class="single-page">
-<div class="page layout__page layout__sidebar-second">
-<header class="header layout__header">
-
+<div class="page layout__page">
+<header class="header layout__header mb--m">
 <h1 class="header__site-name">
 <a href="/" title="Home" class="header__site-link" rel="home"><span>jeyaramashok.github.io</span></a>
 </h1>
@@ -65,24 +64,21 @@
 </div>
 </header>
 
-<nav class="main-menu layout__navigation">
-<h2 class="visually-hidden">Main menu</h2>
+<nav class="main-menu layout__navigation" aria-label="Main menu">
 <ul class="navbar">
 <li><a href="/">Home</a></li>
 <li><a href="/about/">About</a></li>
 <li><a href="/posts/" class="active" aria-current="page">Posts</a></li>
 </ul>
 </nav>
-
-
 <main class="main layout__main">
-<article class="section-posts single-view">
+<article class="single-view single-view--posts">
 <header>
 <h1 class="title ">Minikube Profiles</h1>
-<div class="tags">
+<div class="tags meta">
 Tags:
 <ul>
-<li><a href="/tags/kubernetes">kubernetes</a></li>
+<li><a href="https://jeyaramashok.github.io/tags/kubernetes/">kubernetes</a></li>
 </ul>
 </div>
 </header>
@@ -95,57 +91,60 @@ Tags:
 <p>Sometimes it really helps to actually login to the cluster and see it for ourselves. This is where <a href="https://github.com/kubernetes/minikube">minikube</a> <a href="https://minikube.sigs.k8s.io/docs/commands/profile/">profiles</a> come in handy. They offer a quick way to spin up a specific version of kubernetes or multiple instances. Using which we can use to quickly test or check if some API is avaialable or even compare the behaviour between different versions.</p>
 <h3 id="start-an-instance-with-a-profile">Start an instance with a profile</h3>
 <p>These are some example commands to spin up a instance with a specific kubernetes version.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ minikube start -p v1.14 --kubernetes-version v1.14.10
-$ minikube start -p v1.15 --kubernetes-version v1.15.12
-$ minikube start -p v1.16 --kubernetes-version v1.16.10
-$ minikube start -p v1.17 --kubernetes-version v1.17.6
-$ minikube start -p v1.18 --kubernetes-version v1.18.3
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ minikube start -p v1.14 --kubernetes-version v1.14.10
+</span></span><span style="display:flex;"><span>$ minikube start -p v1.15 --kubernetes-version v1.15.12
+</span></span><span style="display:flex;"><span>$ minikube start -p v1.16 --kubernetes-version v1.16.10
+</span></span><span style="display:flex;"><span>$ minikube start -p v1.17 --kubernetes-version v1.17.6
+</span></span><span style="display:flex;"><span>$ minikube start -p v1.18 --kubernetes-version v1.18.3
+</span></span></code></pre></div><ul>
 <li><code>--kubernetes-version</code> flag specifies which kubernetes version we want to spin up.</li>
 <li><code>-p, --profile</code> flag is the name for the minikube instance</li>
 </ul>
 <p>You can find more kuberetes versions in the <a href="https://github.com/kubernetes/kubernetes/releases">github releases</a></p>
 <h3 id="list-profiles">List Profiles</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ minikube profile list
-|---------|-----------|---------|---------------|------|----------------|---------|
-| Profile | VM Driver | Runtime |      IP       | Port |    Version     | Status  |
-|---------|-----------|---------|---------------|------|----------------|---------|
-| v1.14   | hyperkit  | docker  | 192.168.64.16 | <span style="color:#ae81ff">8443</span> | v1.14.10       | Running |
-| v1.15   | hyperkit  | docker  | 192.168.64.15 | <span style="color:#ae81ff">8443</span> | v1.15.12       | Stopped |
-| v1.16   | hyperkit  | docker  | 192.168.64.14 | <span style="color:#ae81ff">8443</span> | v1.16.10       | Running |
-| v1.18   | hyperkit  | docker  | 192.168.64.17 | <span style="color:#ae81ff">8443</span> | v1.18.3        | Running |
-|---------|-----------|---------|---------------|------|----------------|---------|
-</code></pre></div><h3 id="switch-profiles">Switch Profiles</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ minikube profile list
+</span></span><span style="display:flex;"><span>|---------|-----------|---------|---------------|------|----------------|---------|
+</span></span><span style="display:flex;"><span>| Profile | VM Driver | Runtime |      IP       | Port |    Version     | Status  |
+</span></span><span style="display:flex;"><span>|---------|-----------|---------|---------------|------|----------------|---------|
+</span></span><span style="display:flex;"><span>| v1.14   | hyperkit  | docker  | 192.168.64.16 | <span style="color:#ae81ff">8443</span> | v1.14.10       | Running |
+</span></span><span style="display:flex;"><span>| v1.15   | hyperkit  | docker  | 192.168.64.15 | <span style="color:#ae81ff">8443</span> | v1.15.12       | Stopped |
+</span></span><span style="display:flex;"><span>| v1.16   | hyperkit  | docker  | 192.168.64.14 | <span style="color:#ae81ff">8443</span> | v1.16.10       | Running |
+</span></span><span style="display:flex;"><span>| v1.18   | hyperkit  | docker  | 192.168.64.17 | <span style="color:#ae81ff">8443</span> | v1.18.3        | Running |
+</span></span><span style="display:flex;"><span>|---------|-----------|---------|---------------|------|----------------|---------|
+</span></span></code></pre></div><h3 id="switch-profiles">Switch Profiles</h3>
 <p>To switch between instances, the minikube profile command can be used to set or switch to a particular profile. This also changes the current kubectl context.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ minikube profile v1.15
-✅  minikube profile was successfully set to v1.15
-$ kubectl config current-context
-v1.15
-$ minikube profile v1.16
-✅  minikube profile was successfully set to v1.16
-$ kubectl config current-context
-v1.16
-</code></pre></div><h3 id="stopping-and-deleting-instance">Stopping and Deleting Instance</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ minikube profile v1.15
+</span></span><span style="display:flex;"><span>✅  minikube profile was successfully set to v1.15
+</span></span><span style="display:flex;"><span>$ kubectl config current-context
+</span></span><span style="display:flex;"><span>v1.15
+</span></span><span style="display:flex;"><span>$ minikube profile v1.16
+</span></span><span style="display:flex;"><span>✅  minikube profile was successfully set to v1.16
+</span></span><span style="display:flex;"><span>$ kubectl config current-context
+</span></span><span style="display:flex;"><span>v1.16
+</span></span></code></pre></div><h3 id="stopping-and-deleting-instance">Stopping and Deleting Instance</h3>
 <p>To stop a running instance associated with the profile</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ minikube stop -p v1.16
-</code></pre></div><p>To delete the local cluster associated with the profile</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ minikube delete -p v1.16
-</code></pre></div><h3 id="references">References</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ minikube stop -p v1.16
+</span></span></code></pre></div><p>To delete the local cluster associated with the profile</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ minikube delete -p v1.16
+</span></span></code></pre></div><h3 id="references">References</h3>
 <ul>
 <li><a href="https://minikube.sigs.k8s.io/docs/">Minikube</a></li>
 <li><a href="https://github.com/kubernetes/kubernetes">Kuberneres</a></li>
 </ul>
+</div>
 
+<div class="content content--bottom">
 </div>
 </article>
 </main>
 
 
-<footer class="footer layout__footer">
+<footer class="footer layout__footer mt--l">
 <p><span>© jeyaramashok.github.io</span></p>
 
 
 </footer>
+
 </div>
 </body>
 </html>
