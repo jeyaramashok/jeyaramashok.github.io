@@ -8,7 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jeyaramashok.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
     <item>
       <title>About</title>
       <link>https://jeyaramashok.github.io/about/</link>
@@ -24,7 +23,6 @@
 &lt;p&gt;&lt;a href=&#34;https://keybase.io/jeyaramashok&#34;&gt;&lt;img src=&#34;https://img.shields.io/keybase/pgp/jeyaramashok&#34; alt=&#34;Keybase PGP&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://github.com/jeyaramashok&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/followers/jeyaramashok?style=social&#34; alt=&#34;GitHub followers&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://www.linkedin.com/in/jeyaram/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/-jeyaram-blue?style=flat-square&amp;amp;logo=Linkedin&amp;amp;logoColor=white&amp;amp;link=https://www.linkedin.com/in/jeyaram/&#34; alt=&#34;Linkedin: jeyaram&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://twitter.com/jeyaramashok&#34;&gt;&lt;img src=&#34;https://img.shields.io/twitter/follow/jeyaramashok?style=social&#34; alt=&#34;Twitter Follow&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
-    
     <item>
       <title>Minikube Profiles</title>
       <link>https://jeyaramashok.github.io/posts/minikube-profiles/</link>
@@ -79,6 +77,5 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/kubernetes/kubernetes&#34;&gt;Kuberneres&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
-    
-  </channel>
+    </channel>
 </rss>

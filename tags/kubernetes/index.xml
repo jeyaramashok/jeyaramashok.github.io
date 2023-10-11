@@ -8,7 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jeyaramashok.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
-    
     <item>
       <title>Minikube Profiles</title>
       <link>https://jeyaramashok.github.io/posts/minikube-profiles/</link>
@@ -63,6 +62,5 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/kubernetes/kubernetes&#34;&gt;Kuberneres&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
-    
-  </channel>
+    </channel>
 </rss>
