@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="nojs" lang="en-us" dir="ltr">
+<html class="nojs" lang="en-GB" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
@@ -23,8 +23,12 @@
 
 <link rel="canonical" href="https://jeyaramashok.github.io/tags/">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 
-<link rel="stylesheet" href="/css/styles.b3423fe58b9245aa468491924873dab0fb9c9d39b0f9ea8b94e3e8b4a281e67b.css">
+<link rel="stylesheet" href="/css/mobile.928a90a2e5ceccad718844ea67aa6bba151ff555ab514fb103071cc7b60c2ff2.css" media="screen">
+<link rel="stylesheet" href="/css/styles.c785814686adcef4fd4ba635b9c17f39b7219d93a6e1988f6bd8f6b560c918ed.css">
 <link rel="stylesheet" href="/css/print.31e2819287afc91406f2fd43d21a8ba4a0cdfc272e439c90db0c6e47efc7c346.css" media="print">
 
 <script type="application/ld+json">
@@ -47,6 +51,7 @@
 
 <script src="/js/script-early.214cc4b0248ef64425811a906c0c6a3702edffba5dbc127128e9ff989c74c137.js"></script>
 
+<script defer src="/js/mobile.5b8930f6cf28a69a48ef3d83a1e24c48bb79a14cf0ba53da8fb0d51d1e2e2d7a.js"></script>
 <script defer src="/js/script.1688e04483adf683d47143ac70e770c7b5e4b75213641f33b46d9b84cb3e91ca.js"></script>
 
 
@@ -66,8 +71,30 @@
 
 <nav class="main-menu layout__navigation" aria-label="Main menu">
 <ul class="navbar">
+<li><a href="/"><span>Home</span></a></li>
+<li><a href="/about/"><span>About</span></a></li>
 </ul>
 </nav>
+<div class="mobile-nav" dir="ltr">
+  <div class="mobile-nav__cover"></div>
+  <button class="mobile-nav__toggle button--outline" aria-expanded="false" aria-controls="sheet">
+    Menu
+    <svg class="mobile-nav__hamburger" viewBox="0 0 100 100" focusable="false" aria-hidden="true">
+      <rect width="80" height="12" x="10" y="20" rx="5"></rect>
+      <rect width="80" height="12" x="10" y="45" rx="5"></rect>
+      <rect width="80" height="12" x="10" y="70" rx="5"></rect>
+    </svg>
+  </button>
+  <div class="mobile-nav__sheet link-inverted link-nav" id="sheet" aria-hidden="true">
+    <div class="mobile-nav__region"></div>
+    <nav class="mobile-nav__main-menu" aria-label="Main menu">
+    <ul class="mobile-nav__navbar">
+    <li><a href="/"><span>Home</span></a></li>
+    <li><a href="/about/"><span>About</span></a></li>
+    </ul>
+    </nav>
+  </div>
+</div>
 <main class="main layout__main">
 <header>
 <h1 class="title">Tags</h1>
@@ -79,6 +106,7 @@
 <h2 class="title"><a href="/tags/kubernetes/">Kubernetes</a> <span class="meta">(1)</span></h2>
 <p></p>
 </article>
+
 
 
 </main>
